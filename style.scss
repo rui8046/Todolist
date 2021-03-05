@@ -1,0 +1,250 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+i{
+    pointer-events: none;
+}
+
+body{
+    background: linear-gradient(90deg,rgb(84, 130, 255), rgb(100, 255, 134));
+}
+
+header{
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1{
+        color: white;
+        font-size: 3rem;
+    }
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    input,
+    button{
+        border: none;
+        padding: 0.25rem 0.5rem;
+        font-size: 1.75rem;
+        margin: 0.1rem;
+    }
+
+    input[type="number"]{
+        width: 100px;
+        text-align: center;
+    }
+    /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+
+    /* Firefox */
+    input[type=number] {
+    -moz-appearance: textfield;
+    }
+
+    button{
+        cursor: pointer;
+        background-color: rgb(0, 146, 114);
+        color: white;
+    }
+
+    
+}
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    div.todo{
+        width: 50vw;
+        display: flex;
+        align-items: center;
+        margin: 0.2rem 0rem;
+        transition: all 0.1s escape;
+        p{
+            background-color: white;
+            color: black;
+            padding: 0.25rem 0.5rem;
+            font-size: 1.75rem;
+        }
+
+        p.todo-text{
+            width: 65%;
+        }
+
+        p.todo-time{
+            width: 35%;
+            text-align: center;
+        }
+        
+        button{
+            padding: 0.25rem 0.5rem;
+            font-size: 1.99rem;
+            border: none;
+            cursor:pointer;
+            color: white;
+        }
+
+        button.complete{
+            background-color: rgb(50, 255, 50);
+        }
+
+        button.trash{
+            background-color:red    ;
+        }
+        
+    }
+}
+
+div.sort{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0rem;
+
+    button{
+        cursor: pointer;
+        background-color: rgb(0, 146, 114);
+        color: white;
+        border: none;
+        padding: 00.25rem 0.5rem;
+        font-size: 1.75rem;
+    }
+}
+
+.done{
+    opacity: 0.5;
+    text-decoration: line-through;
+    text-decoration-thickness: 0.2rem;
+}
+
+@keyframes scaleUp{
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+
+@keyframes scaleDown{
+    to{
+        transform: scale(0);
+    }
+}
+
+@media screen and (min-width: 550px) and (max-width: 1100px) {
+    form {
+      input,
+      button {
+        font-size: 1.75rem;
+      }
+      input[type="text"] {
+        // min-width: 30px;
+        // width: 50vw;
+        font-size: 1.5rem;
+      }
+      input[type="number"] {
+        min-width: 30px;
+        width: 10vw;
+        font-size: 1.5rem;
+      }
+      button {
+        font-size: 1.5rem;
+      }
+    }
+    section {
+      div.todo {
+        width: 50vw;
+        margin: 0.2rem 0rem;
+        p.todo-text {
+          font-size: 0.8rem;
+          width: 70%;
+        }
+        p.todo-time {
+          font-size: 0.8rem;
+          width: 30%;
+        }
+        button {
+          padding: 0.25rem 0.5rem;
+          font-size: 1rem;
+        }
+      }
+    }
+    div.sort {
+      button {
+        font-size: 0.5rem;
+      }
+    }
+  }
+  
+  @media screen and (max-width: 549px) {
+    header {
+      h1 {
+        font-size: 2rem;
+      }
+    }
+    form {
+      // display: flex;
+      // flex-direction: column;
+  
+      display: flex;
+      flex-wrap: wrap;
+      input,
+      button {
+        font-size: 1.75rem;
+      }
+      input[type="text"] {
+        min-width: 200px;
+        width: 95vw;
+        font-size: 1.5rem;
+      }
+      input[type="number"] {
+        min-width: 30px;
+        width: 25vw;
+        font-size: 1.25rem;
+      }
+      button {
+        font-size: 1rem;
+      }
+    }
+    section {
+      div.todo {
+        width: 80vw;
+        margin: 0.2rem 0rem;
+        display: flex;
+        flex-wrap: wrap;
+        p.todo-text {
+          font-size: 0.8rem;
+          width: 90%;
+          min-width: 200px;
+        }
+        p.todo-time {
+          font-size: 0.8rem;
+          min-width: 100px;
+          width: 50%;
+        }
+        button {
+          padding: 0.25rem 0.5rem;
+          font-size: 1rem;
+        }
+      }
+    }
+    div.sort {
+      button {
+        margin-top: 50px;
+        font-size: 0.5rem;
+      }
+    }
+  }
+  
